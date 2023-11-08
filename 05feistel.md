@@ -21,6 +21,8 @@ R<sub>i-1</sub> = L<sub>i</sub>
 L<sub>i</sub>   = R<sub>i</sub> xor F(R<sub>i-1</sub>, K<sub>i</sub>) = R<sub>i</sub> xor F(L<sub>i</sub>, K<sub>i</sub>).   
 
 In other words, we can start from *L<sub>n</sub>* and *R<sub>n</sub>* and reverse all the way back to *L<sub>0</sub>* and *R<sub>0</sub>*.   
+
+
 <img src="./feistel.svg">     
 
 
