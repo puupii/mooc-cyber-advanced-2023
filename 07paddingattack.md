@@ -1,0 +1,13 @@
+
+# 07 Oracle Padding Attack
+
+<p>Implement padding oracle attack by completing the functions <code class="language-text">test_value</code> and <code class="language-text">decode_block</code>.</p><p>The function <code class="language-text">test_value(b1, b2, index, oracle)</code> finds out which values of <code class="language-text">b1[index]</code> will produce a valid padding.
+Use <code class="language-text">oracle.isvalid</code> to test the ciphertexts. If there are multiple values with valid padding, then <code class="language-text">test_value</code>
+should select one of the values by modifying <code class="language-text">b1[index - 1]</code>.</p><p>The function <code class="language-text">decode_block(b1, b2, oracle)</code> should decrypt the second block by manipulating <code class="language-text">b1</code> and using <code class="language-text">test_value</code>.</p><p>You will need to copy your implementations of Feistel cipher and Cbc class.</p><p><em>Hints:</em></p><ol>
+<li>There is a lot of xorring here, be careful and perhaps spend some time with pen and paper.</li>
+<li>When solving 7, 6, 5, ... bytes of the block make sure that you setup the trailing padding bytes correctly.</li>
+<li>Don't forget that ultimately we are looking for <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">P_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.83333em; vertical-align: -0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right: 0.13889em;">P</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height: 0.301108em;"><span style="top: -2.55em; margin-left: -0.13889em; margin-right: 0.05em;"><span class="pstrut" style="height: 2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height: 0.15em;"><span></span></span></span></span></span></span></span></span></span> and not <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.68333em; vertical-align: 0em;"></span><span class="mord mathnormal">A</span></span></span></span>.</li>
+</ol>
+
+---
+
