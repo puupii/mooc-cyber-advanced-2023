@@ -24,7 +24,7 @@ Here the message is divided into blocks of length 8, *P<sub>1</sub>,P<sub>1</sub
 We also set *C<sub>0</sub> = iv*, where *iv* is an initialization vector, an array of length 8, provided as a parameter.
 The encryption proceeds iteratively with
 
-*C<sub>i</sub> = encrypt(P<sub>i</sub> xor C<sub>i-1</sub>)*,
+**C<sub>i</sub> = encrypt(P<sub>i</sub> xor C<sub>i-1</sub>)**,
 
 is *encrypt* our block cipher. The final cipher message is *C<sub>1</sub>C<sub>2</sub>C<sub>3</sub>...*. Note that we do not include *C<sub>0</sub>* here, the initilization vector is sent separately.   
 
@@ -33,12 +33,12 @@ is *encrypt* our block cipher. The final cipher message is *C<sub>1</sub>C<sub>2
 
 <p>To decrypt, note that</p>
 
-*P<sub>i</sub> xor C<sub>i-1</sub> = decypt(C<sub>i</sub>)*
+**P<sub>i</sub> xor C<sub>i-1</sub> = decypt(C<sub>i</sub>)**
 
 <p>which we can rewrite</p>
 
 
-*P<sub>i</sub>  = decypt(C<sub>i</sub>) xor C<sub>i-1</sub>*.   
+**P<sub>i</sub>  = decypt(C<sub>i</sub>) xor C<sub>i-1</sub>**.   
 
 
 <img src="./cbcdecrypt.svg" alt="CBC decrypt">    
