@@ -1,8 +1,10 @@
 
 # 05 Feistel Cipher
 
-<p>Feistel ciphers are used as a building blocks in constructing many known block ciphers.</p><p>In feistel cipher you are given a block cipher **F** that can encrypt a message of length *m*.
-You are also given *n* keys **(K~1,...,K~n).</p>
+Feistel ciphers are used as a building blocks in constructing many known block ciphers.</p><p>In feistel cipher you are given a block cipher **F** that can encrypt a message of length *m*.
+You are also given *n* keys **(K~1,...,K~n).   
+
+
 <p>Feistel cipher is a block cipher encrypting messages of *2m*.
 At the beginning, original message is split in two halves, *L~0* and R~0, each of size *m*.
 Then *n* iterations are done with updates</p>
