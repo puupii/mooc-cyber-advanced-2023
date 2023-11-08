@@ -18,7 +18,9 @@ following lines.</p>
 04 04 04 04 
 ...</code></pre></div>
 
-<p>(note that the numbers are byte values not ascii integers)</p>
+(note that the numbers are byte values not ascii integers)    
+
+
 The next step is to encrypt the message.
 Here the message is divided into blocks of length 8, *P<sub>1</sub>,P<sub>1</sub>...*.
 We also set *C<sub>0</sub> = iv*, where *iv* is an initialization vector, an array of length 8, provided as a parameter.
