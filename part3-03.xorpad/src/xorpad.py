@@ -9,7 +9,7 @@ def encrypt(msg, pad):
 
     # write code here
     for i in range(len(msg)):
-        ciphertext[i] = msg[i] ^ pad[i%len(pad)]
+        ciphertext[i] = msg[i] ^ pad[i % len(pad)]
     return ciphertext
 
 
@@ -19,10 +19,9 @@ def decrypt(ciphertext, pad):
 
     # write code here
     for i in range(len(ciphertext)):
-        msg[i] = ciphertext[i] ^ pad[i%len(pad)]
+        msg[i] = ciphertext[i] ^ pad[i % len(pad)]
 
     return msg
-
 
 
 def main(argv):
@@ -47,10 +46,9 @@ def main(argv):
     print(decoded.decode())
 
 
-
 # This makes sure the main function is not called immediatedly
 # when TMC imports this module
-if __name__ == "__main__": 
+if __name__ == "__main__":
     if len(sys.argv) != 3:
         print('usage: python %s msg pad' % sys.argv[0])
     else:

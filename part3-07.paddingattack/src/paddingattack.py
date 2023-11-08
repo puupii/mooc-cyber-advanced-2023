@@ -43,7 +43,7 @@ class Feistel:
 
             Lprevious = Lnext
             Rprevious = Rnext
-            print(Lnext, Rnext)
+#            print(Lnext, Rnext)
         cipher = Lprevious + Rprevious
         return cipher
 
@@ -190,8 +190,7 @@ def test_value(b1, b2, index, oracle):
 def decode_block(b1, b2, oracle):
     # output of the decoder _before_ xor with the previous cipher block
     d = bytearray(8)
-    print(b1, b2)
-    print("asd")
+    #print(b1, b2)
     # decoded block
     plain = bytearray(8)
 

@@ -4,26 +4,26 @@ import base64
 
 
 def test_password(passhash, candidates):
-    #print(passhash)
+    # print(passhash)
     protocol, encoded64salt, encoded64passwordhash = passhash.split('$')
     salt = base64.b64decode(encoded64salt)
-    #print(salt)
-    #print(encoded64passwordhash)
+    print('salt: ', salt)
+    # print(encoded64passwordhash)
     passwordhash = base64.b64decode(encoded64passwordhash.encode('UTF-8'))
-    #print(passwordhash)
+    print('hashed password: ', passwordhash)
     salthash = hashlib.new('sha384')
     salthash.update(salt)
     for guess in candidates:
         guesshash = salthash.copy()
-        #print(guess.encode('utf-8'))
+        # print(guess.encode('utf-8'))
         guesshash.update(guess.encode('utf-8'))
         hashedguess = guesshash.digest()
-        #print(hashedguess)
-        #print(passwordhash)
+        # print(hashedguess)
+        # print(passwordhash)
         if hashedguess == passwordhash:
+            print('found match:')
             return guess
     return None
-
 
 
 def main(argv):

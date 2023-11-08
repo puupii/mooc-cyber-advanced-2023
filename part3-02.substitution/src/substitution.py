@@ -26,7 +26,6 @@ def decrypt(ciphertext, key):
     return msg
 
 
-
 def main(argv):
     msg = argv[1]
 

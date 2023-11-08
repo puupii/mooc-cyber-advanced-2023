@@ -3,7 +3,8 @@ import sys
 import socket
 
 import random
-from string import ascii_lowercase # string containing all lower-case alphabets letters
+from string import ascii_lowercase  # string containing all lower-case alphabets letters
+
 
 def decode(ciphertext, frequencies):
     # ciphertext is a string, frequencies is a dictionary with entries {letter:  float}
@@ -16,8 +17,7 @@ def decode(ciphertext, frequencies):
         cipherfrequency[a] = 0
 
     for c in ciphertext:
-        #normalize frequency as we count them. should be close enough
-        print(c)
+        # normalize frequency as we count them. should be close enough
         if c in ascii_lowercase:
             cipherfrequency[c] = cipherfrequency[c]+1/len(ciphertext)
         else:
@@ -27,8 +27,7 @@ def decode(ciphertext, frequencies):
     sorted_cipherfrequency = dict(sorted(cipherfrequency.items(), key=lambda x:x[1]))
     print(sorted_cipherfrequency)
 
-
-    sorted_frequency = dict(sorted(frequencies.items(), key=lambda x:x[1]))
+    sorted_frequency = dict(sorted(frequencies.items(), key=lambda x: x[1]))
     print(sorted_frequency)
 
     cipherkeys = list(sorted_cipherfrequency.keys())
@@ -39,7 +38,7 @@ def decode(ciphertext, frequencies):
     for k in range(len(cipherkeys)):
         key[cipherkeys[k]] = clearkeys[k]
 
-    #finally decrypt using the key
+    # finally decrypt using the key
 
     for c in ciphertext:
         if c in ascii_lowercase:
@@ -86,4 +85,4 @@ and death shall have no dominion.
 frequencies = {'a': 0.09097387173396673, 'b': 0.014014251781472685, 'c': 0.010807600950118764, 'd': 0.047149643705463186, 'e': 0.10380047505938242, 'f': 0.008669833729216151, 'g': 0.0172209026128266, 'h': 0.08776722090261281, 'i': 0.04928741092636579, 'j': 0.00011876484560570071, 'k': 0.009738717339667458, 'l': 0.056769596199524944, 'm': 0.019358669833729216, 'n': 0.08135391923990498, 'o': 0.06638954869358671, 'p': 0.006532066508313539, 'q': 0.00011876484560570071, 'r': 0.035391923990498814, 's': 0.05890736342042756, 't': 0.06959619952494062, 'u': 0.016152019002375298, 'v': 0.012945368171021378, 'w': 0.02149643705463183, 'x': 0.00011876484560570071, 'y': 0.01828978622327791, 'z': 0.00011876484560570071}
 
 
-#decode(poem,frequencies)
+decode(poem, frequencies)
