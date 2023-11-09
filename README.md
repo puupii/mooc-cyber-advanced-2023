@@ -137,7 +137,7 @@ Use <code class="language-text">oracle.isvalid</code> to test the ciphertexts. I
 should select one of the values by modifying <code class="language-text">b1[index - 1]</code>.</p><p>The function <code class="language-text">decode_block(b1, b2, oracle)</code> should decrypt the second block by manipulating <code class="language-text">b1</code> and using <code class="language-text">test_value</code>.</p><p>You will need to copy your implementations of Feistel cipher and Cbc class.</p><p><em>Hints:</em></p><ol>
 <li>There is a lot of xorring here, be careful and perhaps spend some time with pen and paper.</li>
 <li>When solving 7, 6, 5, ... bytes of the block make sure that you setup the trailing padding bytes correctly.</li>
-<li>Don't forget that ultimately we are looking for *P<sub>2</sub>* not *A*
+<li>Don't forget that ultimately we are looking for P<sub>2</sub> not A
 </ol>
 
 ---
