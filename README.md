@@ -1,5 +1,9 @@
 # mooc-cyber-advanced-2023
 
+https://cybersecuritybase.mooc.fi/module-4.1
+
+---
+
 # 01 Break the Hash
 
 <p>In this exercise you are given a hash and a list of candidate passwords, and
